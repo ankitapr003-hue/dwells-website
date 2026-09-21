@@ -1,0 +1,562 @@
+/* =====================================================
+   DWELLS GLOBAL THEME
+   Reference Palette
+===================================================== */
+
+:root {
+  /* Main Backgrounds */
+  --dwells-bg: #f2f7fa;
+  --dwells-white: #ffffff;
+  --dwells-blue-soft: #d3e3fd;
+
+  /* Brand Accents */
+  --dwells-yellow: #fadb64;
+  --dwells-yellow-soft: #f7e59c;
+  --dwells-olive: #a6a611;
+
+  /* Typography */
+  --dwells-dark: #454545;
+  --dwells-black: #1f2322;
+  --dwells-muted: #667078;
+
+  /* Borders */
+  --dwells-border: #d9e2e7;
+  --dwells-border-soft: #e7edf1;
+
+  /* Shadows */
+  --dwells-shadow:
+    0 18px 45px rgba(69, 69, 69, 0.08);
+
+  --dwells-shadow-hover:
+    0 25px 55px rgba(69, 69, 69, 0.14);
+
+  /* Radius */
+  --dwells-radius-sm: 8px;
+  --dwells-radius-md: 16px;
+  --dwells-radius-lg: 28px;
+
+  /* Motion */
+  --dwells-transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: var(--dwells-bg);
+
+  color: var(--dwells-dark);
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* =====================================================
+   GLOBAL SECTION
+===================================================== */
+
+section {
+  width: 100%;
+}
+
+.dwells-section {
+  background: var(--dwells-bg);
+  color: var(--dwells-dark);
+}
+
+
+/* =====================================================
+   GLOBAL HEADINGS
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dwells-dark);
+}
+
+
+/* =====================================================
+   COMMON ACCENT TEXT
+===================================================== */
+
+.dwells-accent {
+  color: var(--dwells-olive);
+}
+
+.dwells-highlight {
+  color: var(--dwells-yellow);
+}
+
+
+/* =====================================================
+   COMMON BUTTON
+===================================================== */
+
+.dwells-primary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 24px;
+
+  background: var(--dwells-yellow);
+
+  color: var(--dwells-dark);
+
+  border: 1px solid var(--dwells-yellow);
+
+  border-radius: var(--dwells-radius-sm);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--dwells-transition),
+    background var(--dwells-transition),
+    box-shadow var(--dwells-transition);
+}
+
+.dwells-primary-button:hover {
+  transform: translateY(-3px);
+
+  background: #f8d457;
+
+  box-shadow:
+    var(--dwells-shadow);
+}
+
+
+/* =====================================================
+   COMMON OUTLINE BUTTON
+===================================================== */
+
+.dwells-outline-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 24px;
+
+  background: transparent;
+
+  color: var(--dwells-dark);
+
+  border: 1px solid var(--dwells-dark);
+
+  border-radius: var(--dwells-radius-sm);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--dwells-transition),
+    background var(--dwells-transition),
+    color var(--dwells-transition);
+}
+
+.dwells-outline-button:hover {
+  transform: translateY(-3px);
+
+  background: var(--dwells-dark);
+
+  color: var(--dwells-white);
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.dwells-card {
+  background: var(--dwells-white);
+
+  border: 1px solid var(--dwells-border);
+
+  border-radius: var(--dwells-radius-md);
+
+  box-shadow: var(--dwells-shadow);
+
+  transition:
+    transform var(--dwells-transition),
+    box-shadow var(--dwells-transition);
+}
+
+.dwells-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--dwells-shadow-hover);
+}
+
+
+/* =====================================================
+   LIGHT BLUE CARD
+===================================================== */
+
+.dwells-blue-card {
+  background: var(--dwells-blue-soft);
+
+  border:
+    1px solid #c7d9f2;
+}
+
+
+/* =====================================================
+   YELLOW ACCENT LINE
+===================================================== */
+
+.dwells-accent-line {
+  width: 70px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: var(--dwells-yellow);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection {
+  background: var(--dwells-yellow);
+  color: var(--dwells-dark);
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dwells-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dwells-olive);
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #91930d;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+}
+
+/* =====================================================
+   DWELLS TEXT THEME ONLY
+   Images / backgrounds remain unchanged
+===================================================== */
+
+:root {
+  --text-dark: #454545;
+  --text-black: #232323;
+  --text-olive: #8f9308;
+  --text-yellow: #d8b83e;
+  --text-muted: #687277;
+  --text-light: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN HEADINGS
+===================================================== */
+
+h1,
+h2 {
+  color: var(--text-dark);
+}
+
+
+/* Highlighted heading words */
+
+h1 span,
+h2 span {
+  color: var(--text-olive);
+}
+
+
+/* =====================================================
+   H3 / H4
+===================================================== */
+
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-dark);
+}
+
+
+/* =====================================================
+   NORMAL TEXT
+===================================================== */
+
+p {
+  color: var(--text-muted);
+}
+
+
+/* =====================================================
+   SECTION LABELS
+===================================================== */
+
+.section-label,
+.hero-eyebrow,
+.materials-eyebrow,
+.product-eyebrow,
+.company-story-label,
+.ceo-label {
+  color: var(--text-olive);
+}
+
+
+/* =====================================================
+   GOLD / YELLOW ACCENT TEXT
+===================================================== */
+
+.gold-text,
+.highlight-text,
+.accent-text {
+  color: var(--text-yellow);
+}
+
+
+/* =====================================================
+   NAVIGATION TEXT
+===================================================== */
+
+.navbar a,
+.hero-navigation a {
+  color: var(--text-dark);
+}
+
+.navbar a:hover,
+.hero-navigation a:hover {
+  color: var(--text-olive);
+}
+
+.navbar a.active,
+.hero-navigation a.active {
+  color: var(--text-olive);
+}
+
+
+/* =====================================================
+   CARD TITLES
+===================================================== */
+
+.product-card h3,
+.material-card h3,
+.selection-item h3,
+.why-feature h3,
+.dwells-highlight h3 {
+  color: var(--text-dark);
+}
+
+
+/* =====================================================
+   CARD DESCRIPTIONS
+===================================================== */
+
+.product-card p,
+.material-card p,
+.selection-item p,
+.why-feature p,
+.dwells-highlight p {
+  color: var(--text-muted);
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+a {
+  color: var(--text-dark);
+}
+
+a:hover {
+  color: var(--text-olive);
+}
+
+
+/* =====================================================
+   BUTTON TEXT
+===================================================== */
+
+.explore-button,
+.materials-button,
+.dwells-primary-button {
+  color: var(--text-dark);
+}
+
+.contact-button,
+.dwells-outline-button {
+  color: var(--text-dark);
+}
+
+
+/* =====================================================
+   ENQUIRE / CTA TEXT
+===================================================== */
+
+.product-enquire {
+  color: var(--text-olive);
+}
+
+.product-enquire:hover {
+  color: var(--text-yellow);
+}
+
+
+/* =====================================================
+   NUMBERS / SMALL LABELS
+===================================================== */
+
+.product-number,
+.material-number,
+.selection-number,
+.feature-number {
+  color: var(--text-olive);
+}
+
+
+/* =====================================================
+   CEO / ABOUT TEXT
+===================================================== */
+
+.ceo-role,
+.ceo-signature small {
+  color: var(--text-olive);
+}
+
+
+/* =====================================================
+   FOOTER TEXT
+===================================================== */
+
+footer p,
+.footer-text {
+  color: var(--text-muted);
+}
+
+footer h3,
+footer h4 {
+  color: var(--text-dark);
+}
+
+
+/* =====================================================
+   IMPORTANT:
+   TEXT INSIDE DARK IMAGE / DARK SECTIONS
+   STAYS WHITE
+===================================================== */
+
+.construction-label,
+.construction-label span,
+.construction-label small,
+.delivery-top-label,
+.delivery-top-label span,
+.delivery-top-label small,
+.delivery-status,
+.delivery-status strong,
+.delivery-status small,
+.material-main-label,
+.material-main-label span,
+.material-main-label strong,
+.project-label,
+.project-label strong,
+.project-label small,
+.quality-badge {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   YELLOW ACCENT INSIDE DARK SECTIONS
+===================================================== */
+
+.construction-label span,
+.delivery-top-label span,
+.material-main-label span,
+.project-label span {
+  color: var(--text-yellow);
+}

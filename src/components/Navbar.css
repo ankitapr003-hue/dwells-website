@@ -1,0 +1,181 @@
+/* =====================================================
+   DWELLS NAVBAR
+===================================================== */
+
+.navbar {
+  position: relative;
+
+  z-index: 1000;
+
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+
+  background: #a6a611;
+
+  border-bottom:
+    1px solid
+    rgba(69, 69, 69, 0.15);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.navbar-logo a {
+  display: flex;
+
+  align-items: center;
+}
+
+.navbar-logo img {
+  display: block;
+
+  width: 105px;
+
+  height: auto;
+
+  max-height: 78px;
+
+  object-fit: contain;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 34px;
+}
+
+.navbar-links a {
+  position: relative;
+
+  color: #454545;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition:
+    color 0.25s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffffff;
+}
+
+.navbar-links a.active {
+  color: #ffffff;
+}
+
+.navbar-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -14px;
+
+  height: 3px;
+
+  border-radius: 5px;
+
+  background: #fadb64;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.navbar-menu-toggle {
+  display: none;
+
+  border: none;
+
+  background: transparent;
+
+  color: #454545;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  .navbar-logo img {
+    width: 90px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 78px;
+  }
+
+  .navbar-logo img {
+    width: 82px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu-toggle {
+    display: block;
+  }
+}
+

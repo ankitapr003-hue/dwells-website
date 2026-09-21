@@ -1,0 +1,1220 @@
+/* =========================================================
+   DWELLS MATERIAL SUPPLY SYSTEM
+========================================================= */
+
+.dwells-supply {
+  position: relative;
+  padding: 125px 6%;
+  background: #2f2f2f;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.dwells-supply::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(166, 166, 17, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(166, 166, 17, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 65px 65px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.supply-header {
+  position: relative;
+  z-index: 2;
+
+  max-width: 920px;
+
+  margin: 0 auto 95px;
+
+  text-align: center;
+}
+
+.supply-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #c5c52b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.supply-header h2 {
+  margin: 0;
+
+  font-size: clamp(40px, 5vw, 72px);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  font-weight: 800;
+
+  color: #f0eee6;
+}
+
+.supply-header h2 span {
+  display: block;
+
+  color: #b4b41d;
+}
+
+.supply-header p {
+  max-width: 760px;
+
+  margin: 30px auto 0;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #bcbcbc;
+}
+
+
+/* =========================================================
+   MAIN SUPPLY SYSTEM
+========================================================= */
+
+.supply-system {
+  position: relative;
+
+  max-width: 1250px;
+
+  height: 470px;
+
+  margin: auto;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.025),
+      rgba(0,0,0,0.12)
+    );
+
+  overflow: hidden;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.system-label {
+  position: absolute;
+
+  top: 22px;
+
+  font-size: 9px;
+
+  letter-spacing: 2.5px;
+
+  font-weight: 800;
+
+  color: #a8a8a8;
+
+  z-index: 8;
+}
+
+.source-label {
+  left: 30px;
+}
+
+.site-label {
+  right: 30px;
+}
+
+
+/* =========================================================
+   SUPPLY ROAD
+========================================================= */
+
+.supply-road {
+  position: absolute;
+
+  left: 22%;
+
+  right: 23%;
+
+  bottom: 82px;
+
+  height: 65px;
+
+  background: #242424;
+
+  border-top: 1px solid #444;
+
+  border-bottom: 1px solid #444;
+
+  z-index: 2;
+}
+
+.road-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 31px;
+
+  border-top: 2px dashed #777;
+}
+
+
+/* =========================================================
+   MOVING MATERIAL BLOCKS
+========================================================= */
+
+.moving-material {
+  position: absolute;
+
+  bottom: 19px;
+
+  padding: 7px 10px;
+
+  background: #a6a611;
+
+  color: #292929;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  animation:
+    materialMove 7s linear infinite;
+}
+
+.material-one {
+  animation-delay: 0s;
+}
+
+.material-two {
+  animation-delay: 2.3s;
+}
+
+.material-three {
+  animation-delay: 4.5s;
+}
+
+@keyframes materialMove {
+
+  0% {
+    left: -10%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 108%;
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   MATERIAL DEPOT
+========================================================= */
+
+.material-depot {
+  position: absolute;
+
+  left: 35px;
+
+  bottom: 70px;
+
+  width: 235px;
+
+  height: 265px;
+
+  z-index: 4;
+}
+
+.depot-roof {
+  position: absolute;
+
+  top: 0;
+  left: 25px;
+
+  width: 190px;
+
+  height: 18px;
+
+  background: #a6a611;
+
+  transform: skewX(-25deg);
+}
+
+.depot-building {
+  position: absolute;
+
+  left: 20px;
+  top: 18px;
+
+  width: 190px;
+  height: 175px;
+
+  border: 2px solid #686868;
+
+  background: #3a3a3a;
+
+  padding: 25px;
+}
+
+.depot-sign {
+  width: fit-content;
+
+  padding: 7px 10px;
+
+  border: 1px solid #a6a611;
+
+  color: #d2d22d;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+.depot-title {
+  margin-top: 28px;
+
+  font-size: 23px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #eeeeee;
+}
+
+.depot-lines {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-top: 25px;
+}
+
+.depot-lines span {
+  display: block;
+
+  height: 3px;
+
+  background: #626262;
+}
+
+.depot-lines span:nth-child(1) {
+  width: 90%;
+}
+
+.depot-lines span:nth-child(2) {
+  width: 70%;
+}
+
+.depot-lines span:nth-child(3) {
+  width: 50%;
+}
+
+
+/* =========================================================
+   MATERIAL STOCK
+========================================================= */
+
+.material-stack {
+  position: absolute;
+
+  display: flex;
+
+  flex-direction: column-reverse;
+
+  gap: 4px;
+}
+
+.stack-one {
+  left: 5px;
+
+  bottom: 0;
+}
+
+.stack-two {
+  right: 0;
+
+  bottom: 7px;
+}
+
+.material-stack span {
+  width: 65px;
+  height: 13px;
+
+  border: 1px solid #777;
+
+  background: #555;
+}
+
+
+/* =========================================================
+   STEEL BUNDLE
+========================================================= */
+
+.steel-bundle {
+  position: absolute;
+
+  bottom: 2px;
+
+  left: 78px;
+
+  width: 75px;
+
+  height: 45px;
+
+  transform: rotate(-8deg);
+}
+
+.steel-bundle i {
+  position: absolute;
+
+  width: 75px;
+
+  height: 7px;
+
+  background: #9b9b9b;
+
+  border-radius: 4px;
+}
+
+.steel-bundle i:nth-child(1) {
+  top: 5px;
+}
+
+.steel-bundle i:nth-child(2) {
+  top: 16px;
+}
+
+.steel-bundle i:nth-child(3) {
+  top: 27px;
+}
+
+.steel-bundle i:nth-child(4) {
+  top: 38px;
+}
+
+
+/* =========================================================
+   DELIVERY TRUCK
+========================================================= */
+
+.supply-truck {
+  position: absolute;
+
+  left: 42%;
+
+  bottom: 92px;
+
+  width: 245px;
+
+  height: 95px;
+
+  z-index: 6;
+
+  animation:
+    truckFloat 2s ease-in-out infinite;
+}
+
+@keyframes truckFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.truck-body {
+  position: absolute;
+
+  left: 0;
+  top: 14px;
+
+  width: 175px;
+  height: 63px;
+
+  background: #86860f;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.truck-body span {
+  font-size: 15px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.truck-body small {
+  margin-top: 5px;
+
+  font-size: 7px;
+
+  letter-spacing: 1.2px;
+
+  color: #252525;
+}
+
+.truck-cabin {
+  position: absolute;
+
+  right: 0;
+  top: 27px;
+
+  width: 70px;
+  height: 50px;
+
+  background: #707009;
+
+  clip-path:
+    polygon(
+      20% 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 35%
+    );
+}
+
+.truck-window {
+  position: absolute;
+
+  right: 10px;
+  top: 7px;
+
+  width: 42px;
+  height: 21px;
+
+  background: #343434;
+
+  border: 1px solid #999;
+}
+
+.truck-wheel {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 31px;
+  height: 31px;
+
+  border-radius: 50%;
+
+  background: #171717;
+
+  border: 6px solid #444;
+}
+
+.wheel-one {
+  left: 28px;
+}
+
+.wheel-two {
+  right: 22px;
+}
+
+
+/* =========================================================
+   PROJECT SITE
+========================================================= */
+
+.project-site {
+  position: absolute;
+
+  right: 30px;
+
+  bottom: 70px;
+
+  width: 250px;
+
+  height: 280px;
+
+  z-index: 4;
+}
+
+.site-ground {
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 250px;
+
+  height: 7px;
+
+  background: #a6a611;
+}
+
+
+/* =========================================================
+   BUILDING FRAME
+========================================================= */
+
+.building-frame {
+  position: absolute;
+
+  left: 28px;
+
+  bottom: 7px;
+
+  width: 175px;
+
+  height: 235px;
+
+  border-left: 8px solid #707070;
+
+  border-right: 8px solid #707070;
+}
+
+.building-floor {
+  position: absolute;
+
+  left: -8px;
+
+  width: 175px;
+
+  height: 5px;
+
+  background: #858585;
+}
+
+.floor-one {
+  bottom: 0;
+}
+
+.floor-two {
+  bottom: 55px;
+}
+
+.floor-three {
+  bottom: 110px;
+}
+
+.floor-four {
+  bottom: 165px;
+}
+
+.building-column {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 7px;
+
+  height: 235px;
+
+  background: #696969;
+}
+
+.column-one {
+  left: 25px;
+}
+
+.column-two {
+  left: 83px;
+}
+
+.column-three {
+  right: 20px;
+}
+
+
+/* =========================================================
+   SITE MATERIAL
+========================================================= */
+
+.site-material-stack {
+  position: absolute;
+
+  right: -3px;
+
+  bottom: 7px;
+
+  display: flex;
+
+  flex-direction: column-reverse;
+
+  gap: 4px;
+}
+
+.site-material-stack span {
+  display: block;
+
+  width: 58px;
+
+  height: 14px;
+
+  border: 1px solid #8f8f8f;
+
+  background: #555;
+}
+
+
+/* =========================================================
+   SUPPLY CHAIN
+========================================================= */
+
+.supply-chain {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 40px
+    1fr 40px
+    1fr 40px
+    1fr;
+
+  align-items: stretch;
+
+  max-width: 1250px;
+
+  margin: 70px auto 0;
+
+  z-index: 2;
+}
+
+.supply-step {
+  padding: 24px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.035);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.supply-step:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(166,166,17,0.7);
+}
+
+.step-number {
+  margin-bottom: 18px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #baba20;
+}
+
+.step-title {
+  font-size: 17px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #ededed;
+}
+
+.step-content p {
+  margin: 13px 0 18px;
+
+  color: #a9a9a9;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.step-items {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.step-items span {
+  padding: 6px 8px;
+
+  border: 1px solid rgba(166,166,17,0.3);
+
+  color: #c4c42b;
+
+  font-size: 8px;
+
+  letter-spacing: 0.6px;
+}
+
+.chain-arrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 22px;
+
+  color: #a6a611;
+}
+
+
+/* =========================================================
+   FINAL STATEMENT
+========================================================= */
+
+.supply-statement {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 25px;
+
+  max-width: 900px;
+
+  margin: 95px auto 0;
+
+  padding-top: 35px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.14);
+
+  z-index: 2;
+}
+
+.statement-mark {
+  width: 5px;
+
+  min-height: 90px;
+
+  background: #a6a611;
+
+  flex-shrink: 0;
+}
+
+.supply-statement span {
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #bcbc22;
+}
+
+.supply-statement h3 {
+  margin: 10px 0;
+
+  font-size: clamp(25px, 3vw, 40px);
+
+  line-height: 1;
+
+  color: #eeeeee;
+}
+
+.supply-statement p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #a7a7a7;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .dwells-supply {
+    padding: 100px 5%;
+  }
+
+  .supply-system {
+    height: 510px;
+  }
+
+  .supply-chain {
+    grid-template-columns:
+      1fr 30px
+      1fr 30px
+      1fr 30px
+      1fr;
+  }
+
+  .supply-step {
+    padding: 18px;
+  }
+
+  .step-title {
+    font-size: 14px;
+  }
+
+  .supply-truck {
+    left: 37%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .dwells-supply {
+    padding: 80px 18px;
+  }
+
+
+  /* HEADER */
+
+  .supply-header {
+    margin-bottom: 55px;
+  }
+
+  .supply-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .supply-header h2 {
+    font-size: 39px;
+
+    line-height: 0.97;
+
+    letter-spacing: -1px;
+  }
+
+  .supply-header p {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* MAIN VISUAL */
+
+  .supply-system {
+    width: 100%;
+
+    height: 620px;
+  }
+
+
+  /* LABELS */
+
+  .system-label {
+    top: 14px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .source-label {
+    left: 15px;
+  }
+
+  .site-label {
+    right: 15px;
+  }
+
+
+  /* DEPOT */
+
+  .material-depot {
+    left: 12px;
+
+    bottom: 95px;
+
+    transform: scale(0.72);
+
+    transform-origin: bottom left;
+  }
+
+
+  /* PROJECT */
+
+  .project-site {
+    right: -5px;
+
+    bottom: 92px;
+
+    transform: scale(0.68);
+
+    transform-origin: bottom right;
+  }
+
+
+  /* ROAD */
+
+  .supply-road {
+    left: 22%;
+
+    right: 18%;
+
+    bottom: 105px;
+
+    height: 55px;
+  }
+
+  .road-line {
+    top: 27px;
+  }
+
+
+  /* TRUCK */
+
+  .supply-truck {
+    left: 25%;
+
+    bottom: 115px;
+
+    transform: scale(0.68);
+
+    transform-origin: bottom left;
+  }
+
+  @keyframes truckFloat {
+
+    0%,
+    100% {
+      transform:
+        scale(0.68)
+        translateY(0);
+    }
+
+    50% {
+      transform:
+        scale(0.68)
+        translateY(-3px);
+    }
+  }
+
+
+  /* MOVING MATERIALS */
+
+  .moving-material {
+    bottom: 16px;
+
+    font-size: 7px;
+
+    padding: 6px 8px;
+  }
+
+
+  /* SUPPLY CHAIN */
+
+  .supply-chain {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 45px;
+  }
+
+  .supply-step {
+    padding: 20px;
+  }
+
+  .step-number {
+    margin-bottom: 12px;
+
+    font-size: 8px;
+  }
+
+  .step-title {
+    font-size: 15px;
+  }
+
+  .step-content p {
+    font-size: 11px;
+
+    line-height: 1.65;
+  }
+
+  .step-items span {
+    font-size: 7px;
+
+    padding: 6px 8px;
+  }
+
+  .chain-arrow {
+    height: 25px;
+
+    transform: rotate(90deg);
+
+    font-size: 17px;
+  }
+
+
+  /* FINAL MESSAGE */
+
+  .supply-statement {
+    margin-top: 60px;
+
+    gap: 16px;
+
+    padding-top: 27px;
+  }
+
+  .statement-mark {
+    width: 4px;
+
+    min-height: 80px;
+  }
+
+  .supply-statement span {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .supply-statement h3 {
+    font-size: 25px;
+
+    line-height: 1.05;
+  }
+
+  .supply-statement p {
+    font-size: 11px;
+
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .dwells-supply {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+  .supply-system {
+    height: 590px;
+  }
+
+  .material-depot {
+    transform: scale(0.62);
+
+    left: 3px;
+  }
+
+  .project-site {
+    transform: scale(0.58);
+
+    right: -20px;
+  }
+
+  .supply-truck {
+    left: 20%;
+
+    transform: scale(0.58);
+
+    transform-origin: bottom left;
+  }
+
+  @keyframes truckFloat {
+
+    0%,
+    100% {
+      transform:
+        scale(0.58)
+        translateY(0);
+    }
+
+    50% {
+      transform:
+        scale(0.58)
+        translateY(-3px);
+    }
+  }
+
+  .supply-header h2 {
+    font-size: 34px;
+  }
+
+  .supply-header p {
+    font-size: 12px;
+  }
+
+  .supply-statement h3 {
+    font-size: 21px;
+  }
+}

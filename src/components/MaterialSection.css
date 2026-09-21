@@ -1,0 +1,1238 @@
+/* =========================================================
+   DWELLS — MATERIAL JOURNEY
+   DESKTOP + TABLET + MOBILE
+========================================================= */
+
+.materials-section {
+  position: relative;
+  padding: 120px 7%;
+  background: #f4f1e8;
+  color: #303030;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ARCHITECTURAL BACKGROUND
+========================================================= */
+
+.materials-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(166, 166, 17, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(166, 166, 17, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INTRO / HEADER
+========================================================= */
+
+.materials-intro {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 0 auto 105px;
+
+  text-align: center;
+}
+
+.materials-intro-label {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #89890d;
+}
+
+.materials-intro h2 {
+  margin: 0;
+
+  font-size: clamp(40px, 5.5vw, 74px);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  font-weight: 900;
+
+  color: #343434;
+}
+
+.materials-intro h2 span {
+  display: block;
+
+  color: #92920d;
+}
+
+.materials-intro p {
+  max-width: 760px;
+
+  margin: 30px auto 0;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   MATERIAL PROCESS
+========================================================= */
+
+.materials-process {
+  position: relative;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: auto;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   CENTRAL PROCESS LINE
+========================================================= */
+
+.process-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #a6a611 6%,
+      #a6a611 94%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   MATERIAL STAGE
+========================================================= */
+
+.material-stage {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 100px 1fr;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 420px;
+
+  margin-bottom: 75px;
+}
+
+
+/* =========================================================
+   LEFT STAGE
+========================================================= */
+
+.material-stage.left .material-image-wrapper {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.material-stage.left .material-content {
+  grid-column: 3;
+  grid-row: 1;
+
+  padding-left: 45px;
+}
+
+
+/* =========================================================
+   RIGHT STAGE
+========================================================= */
+
+.material-stage.right .material-image-wrapper {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.material-stage.right .material-content {
+  grid-column: 1;
+  grid-row: 1;
+
+  padding-right: 45px;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.material-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 390px;
+
+  overflow: hidden;
+
+  border-radius: 2px;
+
+  background: #ddd;
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.14);
+}
+
+.material-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.7s ease;
+}
+
+.material-image-wrapper:hover .material-image {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.66),
+      transparent 58%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE NUMBER
+========================================================= */
+
+.image-number {
+  position: absolute;
+
+  top: 22px;
+  left: 24px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #fff;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   IMAGE BRAND
+========================================================= */
+
+.image-brand {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  padding: 9px 14px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.5);
+
+  background:
+    rgba(30, 30, 30, 0.25);
+
+  backdrop-filter: blur(6px);
+
+  color: #fff;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  font-weight: 700;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   PROCESS NODE
+========================================================= */
+
+.process-node {
+  grid-column: 2;
+  grid-row: 1;
+
+  position: relative;
+
+  justify-self: center;
+
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    2px solid #a6a611;
+
+  border-radius: 50%;
+
+  background: #f4f1e8;
+
+  box-shadow:
+    0 0 0 9px #f4f1e8;
+
+  z-index: 5;
+}
+
+.process-node span {
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #757509;
+}
+
+
+/* =========================================================
+   MATERIAL CONTENT
+========================================================= */
+
+.material-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.material-tag {
+  margin-bottom: 13px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+
+  color: #92920d;
+}
+
+.material-content h3 {
+  margin: 0 0 17px;
+
+  font-size: 36px;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.5px;
+
+  font-weight: 800;
+
+  color: #333;
+}
+
+.material-content p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #686868;
+}
+
+
+/* =========================================================
+   REQUIRED MATERIALS
+========================================================= */
+
+.materials-used {
+  margin-top: 28px;
+}
+
+.materials-used-title {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #999;
+}
+
+.material-pills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.material-stage.right .material-pills {
+  justify-content: flex-end;
+}
+
+.material-pill {
+  padding: 8px 11px;
+
+  border:
+    1px solid rgba(143, 143, 13, 0.35);
+
+  background:
+    rgba(166, 166, 17, 0.08);
+
+  color: #6e7008;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   OPTIONAL FLOW INDICATOR
+========================================================= */
+
+.next-flow {
+  position: absolute;
+
+  bottom: -50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #969606;
+}
+
+.level-left .next-flow,
+.material-stage.left .next-flow {
+  right: 0;
+}
+
+.level-right .next-flow,
+.material-stage.right .next-flow {
+  left: 0;
+}
+
+.next-arrow {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid #a6a611;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   BOTTOM / COMPLETE SPACE
+========================================================= */
+
+.materials-bottom {
+  position: relative;
+
+  max-width: 1250px;
+
+  margin: 30px auto 0;
+
+  z-index: 2;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 1px;
+
+  margin-bottom: 50px;
+
+  background: rgba(70, 70, 70, 0.18);
+}
+
+.bottom-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  padding: 35px;
+
+  background: #363636;
+
+  color: #fff;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-number {
+  width: 65px;
+  height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    2px solid #a6a611;
+
+  border-radius: 50%;
+
+  color: #d1d13b;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.bottom-content span {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #bcbc29;
+}
+
+.bottom-content h3 {
+  margin: 7px 0;
+
+  font-size: 25px;
+
+  letter-spacing: 0.5px;
+
+  color: #eee;
+}
+
+.bottom-content p {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: #c9c9c9;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .materials-section {
+    padding: 90px 5%;
+  }
+
+  .materials-intro {
+    margin-bottom: 75px;
+  }
+
+  .materials-intro h2 {
+    font-size: 58px;
+  }
+
+  .materials-intro p {
+    font-size: 15px;
+  }
+
+
+  /* -------------------------------------------------------
+     Process line moves to left
+  ------------------------------------------------------- */
+
+  .process-line {
+    left: 32px;
+
+    transform: none;
+  }
+
+
+  /* -------------------------------------------------------
+     Stage becomes vertical
+  ------------------------------------------------------- */
+
+  .material-stage {
+    display: grid;
+
+    grid-template-columns: 64px 1fr;
+
+    grid-template-rows:
+      auto
+      auto;
+
+    min-height: 0;
+
+    margin-bottom: 80px;
+  }
+
+
+  /* -------------------------------------------------------
+     Node
+  ------------------------------------------------------- */
+
+  .process-node {
+    grid-column: 1;
+    grid-row: 1;
+
+    justify-self: center;
+
+    align-self: start;
+
+    margin-top: 15px;
+  }
+
+
+  /* -------------------------------------------------------
+     Image
+  ------------------------------------------------------- */
+
+  .material-stage.left .material-image-wrapper,
+  .material-stage.right .material-image-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 100%;
+
+    height: 340px;
+
+    margin: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     Content
+  ------------------------------------------------------- */
+
+  .material-stage.left .material-content,
+  .material-stage.right .material-content {
+    grid-column: 2;
+    grid-row: 2;
+
+    padding:
+      30px
+      0
+      0;
+
+    text-align: left;
+  }
+
+
+  /* -------------------------------------------------------
+     Materials
+  ------------------------------------------------------- */
+
+  .material-stage.right .material-pills {
+    justify-content: flex-start;
+  }
+
+  .material-pills {
+    justify-content: flex-start;
+  }
+
+  .material-content h3 {
+    font-size: 32px;
+  }
+
+  .material-content p {
+    font-size: 14px;
+  }
+
+
+  /* -------------------------------------------------------
+     Bottom
+  ------------------------------------------------------- */
+
+  .materials-bottom {
+    margin-top: 20px;
+  }
+
+  .bottom-content {
+    padding: 32px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .materials-section {
+    padding-top: 85px;
+    padding-bottom: 90px;
+  }
+
+  .materials-intro h2 {
+    font-size: 52px;
+  }
+
+  .materials-intro p {
+    max-width: 680px;
+
+    font-size: 14px;
+  }
+
+  .material-stage {
+    grid-template-columns: 58px 1fr;
+
+    margin-bottom: 72px;
+  }
+
+  .process-line {
+    left: 29px;
+  }
+
+  .process-node {
+    width: 54px;
+    height: 54px;
+  }
+
+  .material-stage.left .material-image-wrapper,
+  .material-stage.right .material-image-wrapper {
+    height: 320px;
+  }
+
+  .material-content h3 {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .materials-section {
+    padding:
+      72px
+      16px
+      80px;
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     HEADER
+  ======================================================= */
+
+  .materials-intro {
+    width: 100%;
+
+    margin-bottom: 60px;
+
+    padding: 0 3px;
+
+    text-align: center;
+  }
+
+  .materials-intro-label {
+    margin-bottom: 15px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .materials-intro h2 {
+    font-size: 38px;
+
+    line-height: 0.96;
+
+    letter-spacing: -1.2px;
+  }
+
+  .materials-intro p {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* =======================================================
+     PROCESS
+  ======================================================= */
+
+  .materials-process {
+    width: 100%;
+
+    position: relative;
+  }
+
+
+  /* =======================================================
+     VERTICAL LINE
+  ======================================================= */
+
+  .process-line {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 18px;
+
+    width: 2px;
+
+    transform: none;
+
+    background:
+      linear-gradient(
+        to bottom,
+        transparent,
+        #a6a611 5%,
+        #a6a611 95%,
+        transparent
+      );
+  }
+
+
+  /* =======================================================
+     STAGE
+  ======================================================= */
+
+  .material-stage {
+    display: grid;
+
+    grid-template-columns: 42px 1fr;
+
+    grid-template-rows:
+      auto
+      auto;
+
+    width: 100%;
+
+    min-height: 0;
+
+    margin-bottom: 65px;
+  }
+
+
+  /* =======================================================
+     NODE
+  ======================================================= */
+
+  .process-node {
+    grid-column: 1;
+
+    grid-row: 1;
+
+    justify-self: center;
+
+    align-self: start;
+
+    width: 36px;
+    height: 36px;
+
+    margin-top: 12px;
+
+    background: #f4f1e8;
+
+    border:
+      2px solid #a6a611;
+
+    border-radius: 50%;
+
+    box-shadow:
+      0 0 0 6px #f4f1e8;
+
+    z-index: 5;
+  }
+
+  .process-node span {
+    font-size: 8px;
+  }
+
+
+  /* =======================================================
+     IMAGE
+  ======================================================= */
+
+  .material-stage.left .material-image-wrapper,
+  .material-stage.right .material-image-wrapper {
+    grid-column: 2;
+
+    grid-row: 1;
+
+    width: 100%;
+
+    height: 245px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 2px;
+  }
+
+  .material-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+
+  /* =======================================================
+     IMAGE LABELS
+  ======================================================= */
+
+  .image-number {
+    top: 14px;
+    left: 15px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .image-brand {
+    top: 12px;
+    right: 12px;
+
+    padding:
+      7px
+      10px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .material-stage.left .material-content,
+  .material-stage.right .material-content {
+    grid-column: 2;
+
+    grid-row: 2;
+
+    padding:
+      22px
+      0
+      0;
+
+    text-align: left;
+  }
+
+  .material-tag {
+    margin-bottom: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .material-content h3 {
+    margin-bottom: 12px;
+
+    font-size: 27px;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.3px;
+  }
+
+  .material-content p {
+    margin: 0;
+
+    font-size: 12.5px;
+
+    line-height: 1.68;
+
+    color: #696969;
+  }
+
+
+  /* =======================================================
+     REQUIRED MATERIALS
+  ======================================================= */
+
+  .materials-used {
+    margin-top: 20px;
+  }
+
+  .materials-used-title {
+    margin-bottom: 9px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .material-pills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+    gap: 6px;
+  }
+
+  .material-pill {
+    padding:
+      7px
+      9px;
+
+    font-size: 8px;
+
+    line-height: 1.2;
+  }
+
+
+  /* =======================================================
+     FLOW INDICATOR
+  ======================================================= */
+
+  .next-flow {
+    display: none;
+  }
+
+
+  /* =======================================================
+     BOTTOM SECTION
+  ======================================================= */
+
+  .materials-bottom {
+    margin-top: 5px;
+  }
+
+  .bottom-line {
+    margin-bottom: 28px;
+  }
+
+  .bottom-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding:
+      25px
+      20px;
+  }
+
+  .bottom-number {
+    width: 48px;
+    height: 48px;
+
+    font-size: 10px;
+  }
+
+  .bottom-content span {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .bottom-content h3 {
+    margin: 7px 0;
+
+    font-size: 20px;
+
+    line-height: 1.1;
+  }
+
+  .bottom-content p {
+    font-size: 11px;
+
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .materials-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .materials-intro h2 {
+    font-size: 34px;
+  }
+
+  .materials-intro p {
+    font-size: 12px;
+  }
+
+  .material-stage {
+    grid-template-columns: 37px 1fr;
+  }
+
+  .process-line {
+    left: 16px;
+  }
+
+  .process-node {
+    width: 32px;
+    height: 32px;
+
+    margin-top: 10px;
+  }
+
+  .material-stage.left .material-image-wrapper,
+  .material-stage.right .material-image-wrapper {
+    height: 215px;
+  }
+
+  .material-content h3 {
+    font-size: 24px;
+  }
+
+  .material-content p {
+    font-size: 11.5px;
+  }
+
+  .material-pill {
+    padding:
+      6px
+      8px;
+
+    font-size: 7px;
+  }
+
+  .bottom-content {
+    padding:
+      22px
+      17px;
+  }
+
+  .bottom-content h3 {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .material-image,
+  .material-image-wrapper:hover .material-image {
+    transition: none;
+
+    transform: none;
+  }
+
+  .next-flow,
+  .process-node {
+    animation: none;
+  }
+}

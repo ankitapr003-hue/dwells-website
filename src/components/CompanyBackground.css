@@ -1,0 +1,46 @@
+/* =========================================
+   TEXT COLOR UPDATE ONLY
+   Keep existing text, images and layout
+========================================= */
+
+/* Main large text */
+.welcome-title {
+  color: #a6a611 !important;
+}
+
+
+/* Any supporting heading */
+.welcome-section h1,
+.welcome-section h2,
+.welcome-section h3,
+.welcome-section h4 {
+  color: #454545;
+}
+
+
+/* Highlighted words */
+.welcome-section span {
+  color: #a6a611 !important;
+}
+
+
+/* Small label / eyebrow */
+.welcome-eyebrow {
+  color: #8f9308 !important;
+}
+
+
+/* Normal paragraph text */
+.welcome-section p {
+  color: #454545;
+}
+
+
+/* Links inside this section */
+.welcome-section a {
+  color: #8f9308;
+}
+
+.welcome-section a:hover {
+  color: #c7a72f;
+}

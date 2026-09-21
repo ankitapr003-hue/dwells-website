@@ -1,0 +1,772 @@
+/* =====================================================
+   DWELLS ENTRY ANIMATION
+===================================================== */
+
+.entry-screen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  overflow: hidden;
+
+  background: #a6a611;
+
+  color: #454545;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.entry-background {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a6a611 0%,
+      #a9a716 50%,
+      #949408 100%
+    );
+}
+
+
+/* Architectural grid */
+
+.entry-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 65px 65px;
+
+  opacity: 0.35;
+}
+
+
+/* Soft glow */
+
+.entry-glow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(247,229,156,0.18);
+
+  filter: blur(30px);
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.entry-brand {
+  position: absolute;
+
+  left: 50%;
+  top: 28%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  z-index: 10;
+
+  text-align: center;
+}
+
+
+.entry-logo {
+  width: 180px;
+
+  max-width: 42vw;
+
+  height: auto;
+
+  background: #ffffff;
+
+  padding: 8px;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 15px 40px rgba(69,69,69,0.12);
+}
+
+
+.entry-tagline {
+  margin-top: 18px;
+
+  color: #454545;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   ROAD
+===================================================== */
+
+.entry-road {
+  position: absolute;
+
+  left: -5%;
+
+  right: -5%;
+
+  bottom: 22%;
+
+  height: 2px;
+
+  background: rgba(69,69,69,0.30);
+
+  z-index: 2;
+}
+
+
+.road-line {
+  position: absolute;
+
+  top: -2px;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fadb64;
+
+  border-radius: 10px;
+
+  animation:
+    roadMove
+    1s
+    linear
+    infinite;
+}
+
+
+.road-line-1 {
+  left: 8%;
+}
+
+.road-line-2 {
+  left: 34%;
+
+  animation-delay: 0.25s;
+}
+
+.road-line-3 {
+  left: 60%;
+
+  animation-delay: 0.5s;
+}
+
+.road-line-4 {
+  left: 86%;
+
+  animation-delay: 0.75s;
+}
+
+
+@keyframes roadMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-140px);
+  }
+
+}
+
+
+/* =====================================================
+   VEHICLE
+===================================================== */
+
+.entry-vehicle {
+  position: absolute;
+
+  left: -420px;
+
+  bottom: calc(22% - 36px);
+
+  z-index: 8;
+
+  animation:
+    vehicleMove
+    3.15s
+    cubic-bezier(0.22, 0.61, 0.36, 1)
+    forwards;
+}
+
+
+@keyframes vehicleMove {
+
+  0% {
+    left: -420px;
+
+    transform: scale(0.96);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  75% {
+    left: 58%;
+  }
+
+  100% {
+    left: calc(100% + 80px);
+
+    transform: scale(1.02);
+  }
+
+}
+
+
+/* =====================================================
+   VEHICLE SHADOW
+===================================================== */
+
+.vehicle-shadow {
+  position: absolute;
+
+  left: 30px;
+  bottom: -18px;
+
+  width: 330px;
+  height: 23px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(69,69,69,0.28);
+
+  filter: blur(5px);
+}
+
+
+/* =====================================================
+   TRUCK
+===================================================== */
+
+.truck {
+  position: relative;
+
+  width: 370px;
+
+  height: 125px;
+}
+
+
+/* =====================================================
+   CABIN
+===================================================== */
+
+.truck-cabin {
+  position: absolute;
+
+  right: 0;
+  bottom: 25px;
+
+  width: 118px;
+  height: 82px;
+
+  background: #454545;
+
+  border-radius:
+    12px
+    15px
+    7px
+    6px;
+
+  border-bottom:
+    8px solid #303030;
+}
+
+
+/* =====================================================
+   WINDOW
+===================================================== */
+
+.truck-window {
+  position: absolute;
+
+  left: 13px;
+  top: 11px;
+
+  width: 70px;
+  height: 30px;
+
+  background: #d3e3fd;
+
+  border:
+    3px
+    solid
+    #2f3434;
+
+  border-radius: 5px;
+
+  transform:
+    skewX(-8deg);
+}
+
+
+/* =====================================================
+   DOOR
+===================================================== */
+
+.truck-door-line {
+  position: absolute;
+
+  left: 16px;
+  top: 45px;
+
+  width: 1px;
+  height: 30px;
+
+  background: #747474;
+}
+
+
+.truck-handle {
+  position: absolute;
+
+  left: 27px;
+  top: 51px;
+
+  width: 10px;
+  height: 4px;
+
+  border-radius: 5px;
+
+  background: #a6a611;
+}
+
+
+/* =====================================================
+   HEADLIGHT
+===================================================== */
+
+.truck-light {
+  position: absolute;
+
+  right: 4px;
+  bottom: 28px;
+
+  width: 8px;
+  height: 12px;
+
+  border-radius: 2px;
+
+  background: #fadb64;
+
+  box-shadow:
+    0 0 12px rgba(250,219,100,0.8);
+}
+
+
+/* =====================================================
+   MATERIAL LOAD
+===================================================== */
+
+.truck-load {
+  position: absolute;
+
+  left: 0;
+  bottom: 52px;
+
+  width: 268px;
+  height: 72px;
+
+  background:
+    #73756c;
+
+  border-radius:
+    8px
+    6px
+    3px
+    3px;
+
+  border:
+    4px solid
+    #454545;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   MATERIAL PIECES
+===================================================== */
+
+.material-piece {
+  position: absolute;
+
+  background: #c8c4b8;
+
+  border:
+    2px
+    solid
+    #8f8b80;
+
+  border-radius: 2px;
+}
+
+
+/* Cement / concrete blocks */
+
+.piece-1 {
+  width: 75px;
+  height: 28px;
+
+  left: 15px;
+  bottom: 10px;
+
+  transform: rotate(-3deg);
+}
+
+.piece-2 {
+  width: 64px;
+  height: 25px;
+
+  left: 86px;
+  bottom: 13px;
+
+  transform: rotate(2deg);
+}
+
+
+/* Steel / material blocks */
+
+.piece-3 {
+  width: 55px;
+  height: 24px;
+
+  left: 142px;
+  bottom: 11px;
+
+  background: #8d9190;
+}
+
+.piece-4 {
+  width: 58px;
+  height: 20px;
+
+  left: 30px;
+  top: 8px;
+
+  background: #9da09b;
+}
+
+.piece-5 {
+  width: 65px;
+  height: 19px;
+
+  left: 102px;
+  top: 10px;
+
+  background: #aaa89f;
+}
+
+
+/* =====================================================
+   TRUCK BODY
+===================================================== */
+
+.truck-body {
+  position: absolute;
+
+  left: 0;
+  bottom: 25px;
+
+  width: 275px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 18px;
+
+  background: #a6a611;
+
+  border:
+    3px
+    solid
+    #454545;
+
+  border-radius: 3px;
+}
+
+
+.truck-body span {
+  color: #454545;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   WHEELS
+===================================================== */
+
+.truck-wheel {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  background: #252525;
+
+  border:
+    5px
+    solid
+    #454545;
+
+  animation:
+    wheelSpin
+    0.55s
+    linear
+    infinite;
+}
+
+
+.wheel-front {
+  right: 20px;
+}
+
+
+.wheel-back {
+  left: 35px;
+}
+
+
+.wheel-inner {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 14px;
+  height: 14px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #d0d0d0;
+}
+
+
+@keyframes wheelSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =====================================================
+   LOADING TEXT
+===================================================== */
+
+.entry-loading {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 9%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #454545;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+
+  z-index: 10;
+}
+
+
+.loading-line {
+  width: 30px;
+  height: 2px;
+
+  background: #fadb64;
+}
+
+
+/* =====================================================
+   FINAL FADE
+===================================================== */
+
+.entry-fade {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 20;
+
+  background: #ffffff;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.8s ease;
+}
+
+
+/* =====================================================
+   LEAVING STATE
+===================================================== */
+
+.entry-screen.entry-leaving {
+  opacity: 0;
+
+  visibility: hidden;
+}
+
+.entry-screen.entry-leaving .entry-fade {
+  opacity: 1;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .entry-brand {
+    top: 26%;
+  }
+
+  .entry-logo {
+    width: 145px;
+  }
+
+  .truck {
+    transform: scale(0.85);
+
+    transform-origin: bottom left;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .entry-brand {
+    top: 30%;
+  }
+
+  .entry-logo {
+    width: 130px;
+  }
+
+  .entry-tagline {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .entry-vehicle {
+    bottom: 23%;
+
+    left: -340px;
+  }
+
+  .truck {
+    transform: scale(0.72);
+
+    transform-origin: bottom left;
+  }
+
+  .entry-loading {
+    bottom: 10%;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+}

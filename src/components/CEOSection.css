@@ -1,0 +1,1122 @@
+/* =====================================================
+   DWELLS — CEO / LEADERSHIP SECTION
+   Complete CSS
+===================================================== */
+
+.ceo-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #a6a611;
+
+  color: #454545;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BACKGROUND LAYER
+===================================================== */
+
+.ceo-background {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   BLURRED CONSTRUCTION BACKGROUND
+===================================================== */
+
+.ceo-background-image {
+  position: absolute;
+
+  inset: -8%;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=90");
+
+  background-size: cover;
+
+  background-position: center;
+
+  filter: blur(6px);
+
+  opacity: 0.18;
+
+  transform: scale(1.06);
+
+  animation:
+    ceoBackgroundMove
+    18s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* =====================================================
+   BACKGROUND MOVEMENT
+===================================================== */
+
+@keyframes ceoBackgroundMove {
+
+  0% {
+    transform:
+      scale(1.06)
+      translate3d(-1%, -1%, 0);
+  }
+
+  50% {
+    transform:
+      scale(1.11)
+      translate3d(1%, 1%, 0);
+  }
+
+  100% {
+    transform:
+      scale(1.08)
+      translate3d(-1%, 2%, 0);
+  }
+
+}
+
+
+/* =====================================================
+   OLIVE OVERLAY
+===================================================== */
+
+.ceo-background-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(166,166,17,0.98) 0%,
+      rgba(166,166,17,0.95) 35%,
+      rgba(166,166,17,0.88) 65%,
+      rgba(166,166,17,0.82) 100%
+    );
+}
+
+
+/* =====================================================
+   CONTENT WRAPPER
+===================================================== */
+
+.ceo-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding:
+    110px
+    8%
+    100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
+
+.ceo-label {
+  display: inline-block;
+
+  margin-bottom: 55px;
+
+  color: #454545;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MAIN TWO-COLUMN LAYOUT
+===================================================== */
+
+.ceo-layout {
+  display: grid;
+
+  grid-template-columns: 43% 57%;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   LEFT HEADING
+===================================================== */
+
+.ceo-heading {
+  position: relative;
+
+  z-index: 4;
+}
+
+
+.ceo-heading h2 {
+  margin: 0;
+
+  color: #454545;
+
+  font-size:
+    clamp(
+      60px,
+      7vw,
+      105px
+    );
+
+  line-height: 0.88;
+
+  letter-spacing: -5px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+
+/* Highlight */
+
+.ceo-heading h2 span {
+  color: #fadb64;
+}
+
+
+/* =====================================================
+   LEFT DECORATIVE LINE
+===================================================== */
+
+.ceo-gold-line {
+  width: 80px;
+
+  height: 5px;
+
+  margin-top: 35px;
+
+  background: #fadb64;
+
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   LEFT SUPPORTING TEXT
+===================================================== */
+
+.ceo-heading-note {
+  margin:
+    22px
+    0
+    0;
+
+  color:
+    rgba(
+      69,
+      69,
+      69,
+      0.80
+    );
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.ceo-info {
+  position: relative;
+
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns: 45% 55%;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   CEO IMAGE WRAPPER
+===================================================== */
+
+.ceo-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 440px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border:
+    1px
+    solid
+    rgba(
+      69,
+      69,
+      69,
+      0.20
+    );
+
+  border-radius:
+    0
+    75px
+    0
+    0;
+
+  box-shadow:
+    0
+    25px
+    55px
+    rgba(
+      69,
+      69,
+      69,
+      0.20
+    );
+}
+
+
+/* =====================================================
+   ACTUAL CEO PHOTO
+===================================================== */
+
+.ceo-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 17%;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.8s ease;
+}
+
+
+/* =====================================================
+   CEO PHOTO HOVER
+===================================================== */
+
+.ceo-image-wrapper:hover .ceo-image {
+  transform: scale(1.045);
+}
+
+
+/* =====================================================
+   CEO PHOTO OVERLAY
+===================================================== */
+
+.ceo-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(69,69,69,0.28) 0%,
+      rgba(69,69,69,0.04) 38%,
+      rgba(69,69,69,0) 65%
+    );
+}
+
+
+/* =====================================================
+   PHOTO LABEL
+===================================================== */
+
+.ceo-image-label {
+  position: absolute;
+
+  left: 20px;
+
+  bottom: 20px;
+
+  z-index: 5;
+
+  padding:
+    8px
+    15px;
+
+  background: #fadb64;
+
+  color: #454545;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CEO TEXT
+===================================================== */
+
+.ceo-text {
+  position: relative;
+
+  padding-right: 5px;
+}
+
+
+/* =====================================================
+   ROLE
+===================================================== */
+
+.ceo-role {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #454545;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CEO NAME
+===================================================== */
+
+.ceo-text h3 {
+  margin:
+    0
+    0
+    22px;
+
+  color: #454545;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   CEO PARAGRAPHS
+===================================================== */
+
+.ceo-text p {
+  margin:
+    0
+    0
+    17px;
+
+  color:
+    rgba(
+      69,
+      69,
+      69,
+      0.82
+    );
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   SIGNATURE AREA
+===================================================== */
+
+.ceo-signature {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px
+    solid
+    rgba(
+      69,
+      69,
+      69,
+      0.25
+    );
+}
+
+
+/* =====================================================
+   ORIGINAL SIGNATURE IMAGE
+===================================================== */
+
+.ceo-signature-image {
+  display: block;
+
+  width: 190px;
+
+  max-width: 100%;
+
+  height: auto;
+
+  margin-left: -8px;
+
+  background: #ffffff;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   SIGNATURE DESCRIPTION
+===================================================== */
+
+.ceo-signature small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #454545;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   ARCHITECTURAL DECORATION — RIGHT
+===================================================== */
+
+.ceo-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 270px;
+
+  height: 270px;
+
+  right: -85px;
+
+  top: 90px;
+
+  border:
+    1px
+    solid
+    rgba(
+      69,
+      69,
+      69,
+      0.18
+    );
+
+  transform:
+    rotate(45deg);
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   ARCHITECTURAL DECORATION — LEFT
+===================================================== */
+
+.ceo-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+
+  height: 170px;
+
+  left: -80px;
+
+  bottom: 75px;
+
+  border:
+    1px
+    solid
+    rgba(
+      255,
+      255,
+      255,
+      0.23
+    );
+
+  transform:
+    rotate(45deg);
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1150px) {
+
+  .ceo-content {
+    padding:
+      90px
+      6%
+      80px;
+  }
+
+
+  .ceo-layout {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .ceo-heading {
+    max-width: 700px;
+  }
+
+
+  .ceo-info {
+    max-width: 900px;
+
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .ceo-info {
+    grid-template-columns:
+      42%
+      58%;
+
+    gap: 25px;
+  }
+
+
+  .ceo-image-wrapper {
+    height: 410px;
+  }
+
+
+  .ceo-heading h2 {
+    font-size: 75px;
+  }
+
+
+  .ceo-text h3 {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .ceo-content {
+    padding:
+      70px
+      6%
+      65px;
+  }
+
+
+  .ceo-label {
+    margin-bottom: 35px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .ceo-layout {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .ceo-heading h2 {
+    font-size: 57px;
+
+    line-height: 0.90;
+
+    letter-spacing: -3px;
+  }
+
+
+  .ceo-gold-line {
+    width: 65px;
+
+    height: 4px;
+
+    margin-top: 27px;
+  }
+
+
+  .ceo-heading-note {
+    font-size: 12px;
+  }
+
+
+  .ceo-info {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .ceo-image-wrapper {
+    height: 390px;
+
+    border-radius:
+      0
+      55px
+      0
+      0;
+  }
+
+
+  .ceo-image {
+    object-position: center 15%;
+  }
+
+
+  .ceo-text h3 {
+    font-size: 30px;
+  }
+
+
+  .ceo-text p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .ceo-signature-image {
+    width: 175px;
+  }
+
+
+  .ceo-section::before {
+    width: 170px;
+
+    height: 170px;
+
+    right: -70px;
+
+    top: 45px;
+  }
+
+
+  .ceo-section::after {
+    width: 120px;
+
+    height: 120px;
+
+    left: -60px;
+
+    bottom: 40px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+  .ceo-content {
+    padding:
+      60px
+      5%
+      55px;
+  }
+
+
+  .ceo-label {
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .ceo-heading h2 {
+    font-size: 45px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .ceo-heading-note {
+    font-size: 11px;
+  }
+
+
+  .ceo-image-wrapper {
+    height: 320px;
+
+    border-radius:
+      0
+      45px
+      0
+      0;
+  }
+
+
+  .ceo-image {
+    object-position: center 14%;
+  }
+
+
+  .ceo-image-label {
+    left: 14px;
+
+    bottom: 14px;
+
+    padding:
+      7px
+      12px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .ceo-text h3 {
+    font-size: 27px;
+  }
+
+
+  .ceo-text p {
+    font-size: 12px;
+  }
+
+
+  .ceo-signature-image {
+    width: 155px;
+  }
+
+
+  .ceo-signature small {
+    font-size: 8px;
+  }
+
+}
+/* =========================================================
+   CEO SECTION — MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ceo-section {
+    padding: 90px 5%;
+  }
+
+  .ceo-layout {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .ceo-image-wrapper {
+    width: min(500px, 100%);
+    margin: 0 auto;
+  }
+
+  .ceo-content {
+    max-width: 800px;
+  }
+
+  .ceo-content h2 {
+    font-size: 58px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .ceo-section {
+    position: relative;
+
+    padding: 72px 18px 80px;
+
+    overflow: hidden;
+  }
+
+
+  /* -------------------------------------------------------
+     BACKGROUND
+  ------------------------------------------------------- */
+
+  .ceo-background-image {
+    opacity: 0.10;
+
+    transform: scale(1.08);
+  }
+
+  .ceo-background-overlay {
+    opacity: 0.92;
+  }
+
+
+  /* -------------------------------------------------------
+     LAYOUT
+  ------------------------------------------------------- */
+
+  .ceo-layout {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+
+    align-items: stretch;
+  }
+
+
+  /* -------------------------------------------------------
+     CEO IMAGE
+  ------------------------------------------------------- */
+
+  .ceo-image-wrapper {
+    width: 100%;
+
+    max-width: 360px;
+
+    margin: 0 auto;
+  }
+
+  .ceo-image {
+    width: 100%;
+
+    height: auto;
+
+    max-height: 430px;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    display: block;
+  }
+
+
+  /* -------------------------------------------------------
+     LABEL
+  ------------------------------------------------------- */
+
+  .ceo-eyebrow,
+  .ceo-label {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADING
+  ------------------------------------------------------- */
+
+  .ceo-content h2,
+  .ceo-content h1 {
+    font-size: 39px;
+
+    line-height: 0.96;
+
+    letter-spacing: -1px;
+  }
+
+
+  .ceo-name {
+    font-size: 27px;
+
+    line-height: 1.05;
+
+    margin-top: 10px;
+  }
+
+
+  /* -------------------------------------------------------
+     DESCRIPTION
+  ------------------------------------------------------- */
+
+  .ceo-content p {
+    font-size: 12.5px;
+
+    line-height: 1.7;
+
+    margin-top: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     CEO DETAILS
+  ------------------------------------------------------- */
+
+  .ceo-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .ceo-detail {
+    padding: 14px 15px;
+
+    font-size: 10px;
+  }
+
+
+  /* -------------------------------------------------------
+     REMOVE SIGNATURE
+  ------------------------------------------------------- */
+
+  .ceo-signature {
+    display: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     DECORATIVE ELEMENTS
+  ------------------------------------------------------- */
+
+  .ceo-line {
+    width: 42px;
+
+    height: 3px;
+  }
+
+  .ceo-background-image {
+    animation-duration: 28s;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .ceo-section {
+    padding-left: 13px;
+
+    padding-right: 13px;
+  }
+
+  .ceo-image-wrapper {
+    max-width: 320px;
+  }
+
+  .ceo-image {
+    max-height: 380px;
+  }
+
+  .ceo-content h2,
+  .ceo-content h1 {
+    font-size: 34px;
+  }
+
+  .ceo-name {
+    font-size: 24px;
+  }
+
+  .ceo-content p {
+    font-size: 11.5px;
+  }
+}

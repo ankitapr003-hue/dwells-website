@@ -1,0 +1,404 @@
+/* =====================================================
+   DWELLS WHATSAPP QUERY
+===================================================== */
+
+.whatsapp-query {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 9999;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   FLOATING BUTTON
+===================================================== */
+
+.whatsapp-button {
+  position: relative;
+
+  width: 62px;
+  height: 62px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #168c68;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0, 80, 60, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-4px) scale(1.04);
+
+  box-shadow:
+    0 15px 38px rgba(0, 80, 60, 0.35);
+}
+
+
+/* =====================================================
+   WHATSAPP ICON
+===================================================== */
+
+.whatsapp-symbol {
+  width: 31px;
+  height: 31px;
+
+  border: 3px solid #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+.whatsapp-x {
+  font-size: 30px;
+
+  line-height: 1;
+
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   PULSE
+===================================================== */
+
+.whatsapp-pulse {
+  position: absolute;
+
+  top: 3px;
+  right: 3px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #f3bb31;
+
+  border: 2px solid #ffffff;
+}
+
+
+/* =====================================================
+   QUERY PANEL
+===================================================== */
+
+.whatsapp-panel {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 78px;
+
+  width: 360px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce4df;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(0, 40, 32, 0.20);
+
+  animation: whatsappPanelIn 0.3s ease;
+}
+
+@keyframes whatsappPanelIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =====================================================
+   PANEL HEADER
+===================================================== */
+
+.whatsapp-panel-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  background: #073b32;
+
+  color: #ffffff;
+}
+
+.whatsapp-panel-header div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.whatsapp-panel-header strong {
+  font-size: 14px;
+
+  letter-spacing: 0.3px;
+}
+
+.whatsapp-status {
+  width: 9px;
+  height: 9px;
+
+  background: #42d392;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.whatsapp-close {
+  width: 28px;
+  height: 28px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   PANEL BODY
+===================================================== */
+
+.whatsapp-panel-body {
+  padding: 25px 20px 20px;
+}
+
+.whatsapp-panel-body h3 {
+  margin: 0 0 7px;
+
+  color: #101514;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+.whatsapp-panel-body > p {
+  margin: 0 0 20px;
+
+  color: #687672;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   QUERY OPTIONS
+===================================================== */
+
+.whatsapp-query-option {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  background: #f6f8f6;
+
+  border: 1px solid #e0e7e3;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.whatsapp-query-option:hover {
+  background: #eef6f1;
+
+  border-color: #168c68;
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   QUERY ICON
+===================================================== */
+
+.query-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 9px;
+
+  font-size: 19px;
+}
+
+
+/* =====================================================
+   QUERY CONTENT
+===================================================== */
+
+.query-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  flex: 1;
+}
+
+.query-content strong {
+  color: #073b32;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.query-content small {
+  color: #6b7874;
+
+  font-size: 10px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.query-arrow {
+  color: #168c68;
+
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.whatsapp-query-option:hover .query-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   PANEL FOOTER
+===================================================== */
+
+.whatsapp-panel-footer {
+  padding: 12px 20px;
+
+  border-top: 1px solid #e5e9e7;
+
+  color: #8a9591;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .whatsapp-query {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .whatsapp-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .whatsapp-panel {
+    right: 0;
+
+    bottom: 70px;
+
+    width: calc(100vw - 36px);
+
+    max-width: 350px;
+  }
+
+}
