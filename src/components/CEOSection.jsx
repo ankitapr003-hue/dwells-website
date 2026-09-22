@@ -47,12 +47,13 @@ function CEOSection() {
             {/* CEO PHOTO ONLY */}
             <div className="ceo-image-wrapper">
 
-              <img
-                src="/Images/CEO/ceo-photo.png"
-                alt="DWELLS CEO"
-                className="ceo-image"
-              />
-
+             <img
+  src={`${import.meta.env.BASE_URL}dwells-logo.png`}
+  alt="DWELLS"
+  width="160"
+  height="160"
+  className="entry-logo"
+/>
               <div className="ceo-image-overlay"></div>
 
               <div className="ceo-image-label">

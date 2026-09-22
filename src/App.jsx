@@ -357,18 +357,20 @@ function Footer() {
 
       <div className="footer-inner">
 
-        <div className="footer-brand">
+       <div className="footer-brand">
+  <img
+    src={`${import.meta.env.BASE_URL}dwells-logo.png`}
+    alt="DWELLS"
+    width="160"
+    height="160"
+    loading="lazy"
+    decoding="async"
+  />
 
-          <img
-            src="/dwells-logo.png"
-            alt="DWELLS"
-          />
-
-          <p>
-            Quality materials. Better spaces.
-          </p>
-
-        </div>
+  <p>
+    Quality materials. Better spaces.
+  </p>
+</div>
 
 
         <div className="footer-links">

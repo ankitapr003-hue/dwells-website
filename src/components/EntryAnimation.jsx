@@ -44,10 +44,12 @@ function EntryAnimation({ onComplete }) {
       <div className="entry-brand">
 
   <img
-    src="/dwells-logo.png"
-    alt="DWELLS"
-    className="entry-logo"
-  />
+  src={`${import.meta.env.BASE_URL}dwells-logo.png`}
+  alt="DWELLS"
+  width="160"
+  height="160"
+  className="entry-logo"
+/>
 
   <p className="entry-tagline">
     QUALITY MATERIALS • BETTER SPACES
