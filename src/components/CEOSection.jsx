@@ -46,21 +46,20 @@ function CEOSection() {
 
             {/* CEO PHOTO ONLY */}
             <div className="ceo-image-wrapper">
+  <img
+    src={`${import.meta.env.BASE_URL}Images/CEO/ceo-photo.png`}
+    alt="Founder and CEO of DWELLS"
+    width="1145"
+    height="1374"
+    loading="lazy"
+    decoding="async"
+    className="ceo-image"
+  />
 
-             <img
-  src={`${import.meta.env.BASE_URL}dwells-logo.png`}
-  alt="DWELLS"
-  width="160"
-  height="160"
-  className="entry-logo"
-/>
-              <div className="ceo-image-overlay"></div>
-
-              <div className="ceo-image-label">
-                DWELLS
-              </div>
-
-            </div>
+  <div className="ceo-image-label">
+    DWELLS
+  </div>
+</div>
 
 
             {/* CEO TEXT */}
