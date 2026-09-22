@@ -10,9 +10,11 @@ function Navbar() {
       <div className="navbar-logo">
         <a href="/" aria-label="DWELLS Home">
           <img
-            src="/dwells-logo.png"
-            alt="DWELLS"
-          />
+  src={`${import.meta.env.BASE_URL}dwells-logo.png`}
+  alt="DWELLS"
+  width="160"
+  height="160"
+/>
         </a>
       </div>
 
