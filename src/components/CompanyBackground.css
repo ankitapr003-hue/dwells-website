@@ -32,7 +32,7 @@
 
 /* Normal paragraph text */
 .welcome-section p {
-  color: #454545;
+  color: #683f3f;
 }
 
 
@@ -42,5 +42,5 @@
 }
 
 .welcome-section a:hover {
-  color: #c7a72f;
+  color: #d3ae2a;
 }
